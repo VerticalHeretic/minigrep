@@ -1,5 +1,5 @@
 [package]
-name = "minigrep"
+name = "minigrep_lswarss"
 version = "0.1.0"
 edition = "2021"
 description = "A very small part of Unix/Linux tool `grep` made with Rust for learning purpose while reading and studying the Rust Book"

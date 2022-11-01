@@ -1,6 +1,6 @@
-//! # minigrep
+//! # minigrep_lswarss
 //!
-//! `minigrep` is a very small part of Unix/Linux tool `grep` made with Rust for
+//! `minigrep_lswarss` is a very small part of Unix/Linux tool `grep` made with Rust for
 //! learning purpose while reading and studying the [Rust Book](https://doc.rust-lang.org/stable/book/)
 
 use std::env;
@@ -65,7 +65,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 ///   );
 ///
 /// let query = String::from("amazing");
-/// let amazing_lines = minigrep::search(&query, &content);
+/// let amazing_lines = minigrep_lswarss::search(&query, &content);
 ///
 /// assert_eq!(vec!["this text is amazing,", "this is amazing,"], amazing_lines)
 /// ```
