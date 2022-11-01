@@ -1,3 +1,8 @@
+//! # minigrep
+//!
+//! `minigrep` is a very small part of Unix/Linux tool `grep` made with Rust for
+//! learning purpose while reading and studying the [Rust Book](https://doc.rust-lang.org/stable/book/)
+
 use std::env;
 use std::error::Error;
 use std::fs;
@@ -48,6 +53,22 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+/// Searches through the contents for given query (with case sensitivity) and returns the lines containing it
+/// # Examples
+///
+/// ```
+///  let content = String::from(
+///"this is text
+///this text is amazing,
+///this is amazing,
+///not good at all",
+///   );
+///
+/// let query = String::from("amazing");
+/// let amazing_lines = minigrep::search(&query, &content);
+///
+/// assert_eq!(vec!["this text is amazing,", "this is amazing,"], amazing_lines)
+/// ```
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     contents
         .lines()
